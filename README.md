@@ -1,18 +1,19 @@
-# test 
-
+# T
+  
 ## Description: 
-test
+T
 ## Table of Contents
 * [Installation](#installation)
-* [Usage](#Usage)
-* [Contributers](#Contributers)
-* [License](#License)
-## Installation: 
-
+* [Usage](#usage)
+* [Contributors](#contributors)
+* [License](#license)
+## Installation 
+the following dependencies need to be installed to run the application properly:
+T
 ## Usage: 
-test
-## Contributers: 
-* test
+T
+## Contributors: 
+* T
 
 ## License:<br/>
-test
+T

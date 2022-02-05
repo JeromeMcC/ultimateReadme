@@ -1,5 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { Console } = require('console');
+const markdownGenerator = require('./utils/generateMarkdown')
 
 // Use writeFileSync method to use promises instead of a callback function
 
@@ -28,7 +30,7 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'contributors',
-      message: 'list your contributers if any',
+      message: 'list your contributors if any',
     },
     {
       type: 'input',
@@ -39,39 +41,42 @@ const promptUser = () => {
 };
 
 //title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-generateReadme = ({ title, description, install, usage, contributors, license }) =>
-  `# ${title} 
+// generateReadme = ({ title, description, install, usage, contributors, license }) =>
+//   `# ${title} 
 
-## Description:\ 
-${description}
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#Usage)
-* [Contributers](#Contributers)
-* [License](#License)
-## Installation:\ 
-${install}
-## Usage:\ 
-${usage}
-## Contributers:\ 
-* ${contributors}
+// ## Description:\ 
+// ${description}
+// ## Table of Contents
+// * [Installation](#installation)
+// * [Usage](#Usage)
+// * [Contributors](#Contributors)
+// * [License](#License)
+// ## Installation:\ 
+// ${install}
+// ## Usage:\ 
+// ${usage}
+// ## Contributors:\ 
+// * ${createListofContributors()}
 
-## License:<br/>
-${license}`
+// ## License:<br/>
+// ${license}`
 
-// function createListofContributors(contributors) {
-//   var contributorsArr = contributors.split(',');
-//   contributorsArr.forEach ((contributor) => {
-//       return '* ${contributor}'
-//   });
+//  function createListofContributors(contributors) {
+//    var contributorsArr = contributors.split(',');
+//    contributorsArr.forEach ((item,index) => {
+//      console.log(contributors, contributorsArr[0])
+//      return contributorsArr[0]
   
-  //}
+       
+//    });
+  
+//   }
   
 // Bonus using writeFileSync as a promise
 const init = () => {
   promptUser()
     // Use writeFileSync method to use promises instead of a callback function
-    .then((answers) => fs.writeFileSync('README.md', generateReadme(answers)))
+    .then((answers) => fs.writeFileSync('README.md', markdownGenerator(answers)))
     .then(() => console.log('Successfully wrote to readme.md'))
     .catch((err) => console.error(err));
 };
