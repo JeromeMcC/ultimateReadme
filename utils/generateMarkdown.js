@@ -1,20 +1,25 @@
+let inputData = data.license
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  let licenseId=license
+function renderLicenseLink() {
+  let licenseId= data.license
   switch(licenseId) {
     case 'MIT':
-      return '(https://opensource.org/licenses/MIT'
+      return '(https://opensource.org/licenses/MIT';
+      break;
     case 'Mozilla':
-      return 'https://opensource.org/licenses/MPL-2.0'
+      return 'https://opensource.org/licenses/MPL-2.0';
+      break;
     case 'IBM':
-      return 'https://opensource.org/licenses/IPL-1.0'
+      return 'https://opensource.org/licenses/IPL-1.0';
+      break;
     case 'Apache':
-      return 'https://opensource.org/licenses/Apache-2.0'
+      return 'https://opensource.org/licenses/Apache-2.0';
+      break;
     case 'Unlicensed':
       return 'http://unlicense.org/'
   }
@@ -45,15 +50,15 @@ ${data.description}
 * [Contributors](#contributors)
 * [License](#license)
 ## Installation\ 
-the following dependencies need to be installed to run the application properly:
+The following dependencies need to be installed to run the application properly:\
 ${data.install}
 ## Usage:\ 
 ${data.usage}
 ## Contributors:\ 
 * ${data.contributors}
 
-## License:<br/>
-${data.license}`
+${renderLicenseSection(data.license)}
+`
 ;
 }
 
