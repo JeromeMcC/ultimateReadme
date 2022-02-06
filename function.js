@@ -1,6 +1,6 @@
 function createListofContributors(contributors) {
     var contributorsArr = contributors.split(',');
-    contributorsArr.forEach ((contributor) => {
+    contributorsArr.forEach//map ((contributor) => {
         contributor
     });
     }

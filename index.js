@@ -20,7 +20,7 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'install',
-      message: 'What do you need to run your project?',
+      message: 'What are the installation instructions?',
     },
     {
       type: 'input',
@@ -29,48 +29,54 @@ const promptUser = () => {
     },
     {
       type: 'input',
-      name: 'contributors',
-      message: 'list your contributors if any',
+      name: 'contributing',
+      message: 'how can we further contribute to this project',
     },
     {
-      type: 'input',
-      name: 'license',
-      message: 'Is your project under any license',
-    },
+            type: 'list',
+            message: 'Is your project under a license?',
+            name: 'license',
+        choices:
+                [
+                    {
+                        name: 'MIT',
+                    },
+                    {
+                        name: 'Mozilla',
+                    },
+                    {
+                        name: 'IBM',
+                    },
+                    {
+                        name: 'Apache',
+                    },
+                    {
+                        name: 'Unlicensed',
+                    },
+                    {
+                        name: 'none',
+                    },
+                ],
+        },
+        {
+          type: 'input',
+          name: 'test',
+          message: 'Are there any tests that need to be run on this application?',
+        },
+        {
+          type: 'input',
+          name: 'email',
+          message: 'What is your Email?',
+        },
+        {
+          type: 'input',
+          name: 'username',
+          message: 'What is your GitHub username?',
+        },
   ]);
 };
 
-//title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-// generateReadme = ({ title, description, install, usage, contributors, license }) =>
-//   `# ${title} 
 
-// ## Description:\ 
-// ${description}
-// ## Table of Contents
-// * [Installation](#installation)
-// * [Usage](#Usage)
-// * [Contributors](#Contributors)
-// * [License](#License)
-// ## Installation:\ 
-// ${install}
-// ## Usage:\ 
-// ${usage}
-// ## Contributors:\ 
-// * ${createListofContributors()}
-
-// ## License:<br/>
-// ${license}`
-
-//  function createListofContributors(contributors) {
-//    var contributorsArr = contributors.split(',');
-//    contributorsArr.forEach ((item,index) => {
-//      console.log(contributors, contributorsArr[0])
-//      return contributorsArr[0]
-  
-       
-//    });
-  
-//   }
   
 // Bonus using writeFileSync as a promise
 const init = () => {
