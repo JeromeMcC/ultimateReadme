@@ -3,7 +3,7 @@ const fs = require('fs');
 const { Console } = require('console');
 const markdownGenerator = require('./utils/generateMarkdown')
 
-// Use writeFileSync method to use promises instead of a callback function
+
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -78,10 +78,10 @@ const promptUser = () => {
 
 
   
-// Bonus using writeFileSync as a promise
+
 const init = () => {
   promptUser()
-    // Use writeFileSync method to use promises instead of a callback function
+   
     .then((answers) => fs.writeFileSync('README.md', markdownGenerator(answers)))
     .then(() => console.log('Successfully wrote to readme.md'))
     .catch((err) => console.error(err));
