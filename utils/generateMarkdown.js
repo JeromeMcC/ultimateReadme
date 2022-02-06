@@ -71,7 +71,7 @@ ${data.install}
 ${data.usage}
 
 ## Contribution
-* ${data.contributing}
+Contributors:${data.contributing}
 
 ${renderLicenseSection(data.license)}
 

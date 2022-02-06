@@ -15,12 +15,12 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'description',
-      message: 'What is your project about?',
+      message: 'What is your project about? what does it do? describe it.',
     },
     {
       type: 'input',
       name: 'install',
-      message: 'What are the installation instructions?',
+      message: 'What are the installation instructions? What needs to be installed for this to run?',
     },
     {
       type: 'input',
@@ -30,7 +30,7 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'contributing',
-      message: 'how can we further contribute to this project',
+      message: 'Who else helped create this project?',
     },
     {
             type: 'list',
@@ -61,7 +61,7 @@ const promptUser = () => {
         {
           type: 'input',
           name: 'test',
-          message: 'Are there any tests that need to be run on this application?',
+          message: 'The following is needed to run a test on this application',
         },
         {
           type: 'input',
